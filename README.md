@@ -13,11 +13,11 @@ The code was tested on a computer with Windows Subsystem for Linux (Ubuntu 16.04
 
 # Approach
 
-For this challenge, I employed a 'donors' dictionary to record the valid donors' information and identify the repeated donors, and another 'output' dictionary to record the repeated donations The dict key for the 'donors' dictionary would be 'donor name + 5 digit zip code', and for the 'output' dictionary would be 'recipient ID + zip code + transaction year'. The steps of the solution are as below:
+For this challenge, I employed a 'donors' dictionary to record the valid donors' information and identify the repeated donors, and another 'output' dictionary to record the repeated donations. The dict key for the 'donors' dictionary would be 'donor name + 5 digit zip code', and for the 'output' dictionary would be 'recipient ID + zip code + transaction year'. The steps of the solution are as below:
 
 1. Streaming each line from input file.
-2.  Identify and name all the useful fields from each line, and validate those input items are in the right format, for example, the OTHER_ID should always be empty.
+2.  Identify and name all the useful fields from each line, and validate those input items in the right format, for example, the OTHER_ID should always be empty.
 3.  Use the donors' name and zip code as their special ID. 
 If a repeated donor is identified, then record the repeated donation in the output dict, and calculate the total number of transactions from the repeated donors, the percentile as well as the total amount of the repeated donations.
-4. Write all the information to the output file.
+4. Write the identified repeated donation to the output file in every cycle of streaming.
 5. The function used to calculate the percentile is based on the description by Wikipedia.
